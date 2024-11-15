@@ -4,17 +4,387 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Page: Your name here</title>
+
+    <!--inernal css here first and external css later -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+      /* reset css to default */
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        /* outline: 1px dashed #808080; */
+      }
+
+      /* set the page background and styles */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: lightcyan;
+    }
+
+    /* header n navigation styling */
+    .header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 20px 70px 70px;  /*top , right, bottom, left*/
+      width: 80%;
+      margin: auto;
+    }
+
+    nav ul{
+      display: flex;}
+
+     nav ul li{
+      list-style-type: none;
+      margin-inline: 30px;
+    }
+
+    nav ul li a{
+      color: teal;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover{
+        color:#fdbd31;
+        transition: 0.3s;
+    }
+
+    /* styling for main section */
+    #mainsection{
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      column-gap: 20px;
+      width: 80%;
+      margin: auto;
+      height: 100dvh;
+    }
+
+    /* styling for left div */
+    .left-div{
+      display: flex;
+      flex: 1; 
+      flex-direction: column;
+      /* justify-content: center; */
+      align-items: end;
+    }
+
+    .right-div{
+      display: flex;
+      flex: 1;     
+      flex-direction: column;
+      /* justify-content: center; */
+      align-items: normal;
+      width: 90%;
+      margin: 20px auto;
+    }
+
+    /* profile container styling */
+    .profilecontainer{
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      margin: 10px;
+      width: 300px;
+    }
+
+    .rounded-image{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 5px;
+      border: 5px solid white;
+    }
+
+    .profilecontainer p span{
+      display:block;
+    }
+
+    .profiledetails ul li{
+      list-style-type: none;
+      font-size: small;
+      padding-left: 20px;
+      line-height: 25px;
+    }
+
+    .profiledetails .subheader{
+      display: block;
+      padding: 5px 0;
+      font-size: medium;
+      border-bottom: 1px dashed lightblue;
+      border-top: 1px dashed lightblue;
+    }
+
+    .linkcontainer{
+      display: flex;
+      margin-top: 10px;
+    }
+
+    .linkcontainer a{
+      padding: 10px 20px;
+      font-size: small;
+      background-color: teal;
+      color: white;
+      border-radius: 2px solid white;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .projectcard{
+      font-size: small;
+      background-color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      padding-bottom: 24px;
+    }
+
+    .projectcard h4, .projectcard p{
+      padding-left: 24px;
+    }
+
+    .projectcard img{
+      display: block;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+      height: 180px;
+      background-size: cover;
+      background-position-x: center;
+      background-position-y: center;
+      background-image: url("img/imgplaceholder.png");
+      text-indent: -9999px; /* remove or comment out text indent if all images are available */
+    }
+
+    .projectcard .scope{
+      text-transform: uppercase;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .projectcard:hover{
+      transition: 0.45s ease-out;
+      transform: scale(1.05);
+    }
+
+    .projectcard a{
+      text-decoration: none;
+      color: grey;
+      transform: scale(1.0);
+    }
+
+    .projectcard span{
+      display: inline-block;
+      font-size: x-small;
+      align-content: space-between;
+      border-radius: 6px;
+      margin: 4px;
+      background-color: lightseagreen;
+      padding: 5px 10px;
+      color: #FFFFFF;
+      white-space: nowrap;
+    }
+
+    /* styling project section and showcase container */
+
+    .showcasecontainer{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .sectiontitle,.logo{
+      font-size: 45px;
+      font-weight: 700;
+      color: teal;
+    }
+
+    #projectsection{
+    width: 80%;
+    margin: 0 auto;
+    height: 100vfh;
+    }
+
+    .top{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+
+    .top a{
+      margin-top: 20px;
+      text-decoration: none;
+      color: lightseagreen;
+      font-size: small;
+    }
+
+    </style>
+
   </head>
   <body>
     <!-- Set up your page structure here -->
+    <!-- start of header -->
+    
+      <a name="top"><!-- This is an anchor tag, equivalent of a bookmark --></a>
+      <div class="header">
+        <div>
+          <!-- Uncomment the line here to add a logo -->
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#top">Home.</a></li>
+            <li><a href="#projects">Projects.</a></li>
+            <li><a href="#contact">Let's talk.</a></li>
+          </ul>
+        </nav>
+      </div>
+    
+    <!-- end of header -->
+    <!-- start of main section -->
+    <section id="mainsection">
+      <!-- left section -->
+      <div class="left-div">
+        <!-- profile information --> 
+        <div class="profilecontainer">                 
+          <img src="/img/alex.png" class="rounded-image" alt="profile photo of Jin">
+          <p>
+            <span>Jin</span>
+            <span>Full Stack Developer</span>
+          </p>
+        </div>
+        <!-- profile details -->
+        <div class="profiledetails">
+          <p>
+            <span class="subheader">Codes in:</span>
+            <ul>
+              <li>Html.Css.Javascript</li>
+              <li>Java</li>
+              <li>SQL</li>
+            </ul>
+            <span class="subheader">Works in:</span>
+            <ul>
+              <li>React</li>
+              <li>Springboot</li>
+              <li>jUnit + Mockito (Unit Tests)</li>
+            </ul>
+            </ul>
+          </p>
+        </div>
+       </div>
+      <!-- right section -->
+       <div class="right-div">
+        <div class="text">
+          <h1>Hi! <span class="typing"></span></h1>
+          <p>Good day, visitor. Use this template to start your portfolio development journey.</p>
+        </div>
+        <div class="linkcontainer">
+          <a href="#projects" >View More Projects below.</a>
+        </div>
+       </div>
+    </section>
+    <!-- end of main section -->
 
+    <!-- start of project section, uses grids -->
+  <a name="projects"></a>
+  <section id="projectsection">
+
+      <div class="sectiontitle">Projects</div>
+      <div class="showcasecontainer">
+        <!-- Project Cards go here -->
+
+        <!-- Project Card #1 -->
+        <div class="projectcard">
+          <a href="#">
+            <img src="/img/web-design.jpg" alt="picture of web design">
+            <!-- project title -->
+            <h4>Community Web Portal Design</h4>
+            <p class="scope">Web Design</p>
+            <p>
+              <span>UI/UX</span><span>HTML</span><span>CSS</span>
+            </p>
+          </a>
+        </div>
+
+        <!-- Project Card #2 -->
+        <div class="projectcard">
+          <a href="#">
+            <img src="/img/mobile-app.jpg" alt="picture of mobile app">
+            <!-- project title -->
+            <h4>Expense Calculator Web App</h4>
+            <p class="scope">JavaScript Development</p>
+            <p><span>User Interaction</span><span>Application Logic</span></p>
+          </a>
+        </div>
+
+        <!-- Project Card #3 -->
+        <div class="projectcard">
+          <a href="#">
+            <img src="/img/data-tracking.jpg" alt="picture of data tracking">
+            <!-- project title -->
+            <h4>Enrollment Tracker</h4>
+            <p class="scope">Database Design</p>
+            <p><span>SQL</span><span>Data Analysis</span></p>
+          </a>
+        </div>
+
+        <!-- Project Card #4 -->
+        <div class="projectcard">
+          <a href="#">
+            <img src="img/chess.jpg" alt="picture of chess">
+            <!-- project title -->
+            <h4>Chess Game</h4>
+            <p class="scope">Web Design</p>
+            <p><span>Game Development</span></p>
+          </a>
+        </div>
+
+        <!-- Project Card #5 -->
+        <div class="projectcard">
+          <a href="#">
+            <img src="img/fitness-tracking.jpg" alt="Add a description here">
+            <!-- Project name -->
+            <h4>Fitness Tracker</h4>
+            <p class="scope">App Development</p>
+            <p><span>SwiftUI</span><span>Swift Programming</span></p>
+          </a>
+        </div>
+
+        <!-- Project Card #6 -->
+        <div class="projectcard">
+          <a href="#">
+            <img src="img/photography.jpg" alt="Add a description here">
+            <!-- Project name -->
+            <h4>SG Arts Award</h4>
+            <p class="scope">Photography</p>
+            <p><span>Creative</span><span>Competition</span></p>
+          </a>
+      </div>
+
+
+
+      </div>
+  </section>
+    <!-- end of project section -->
+
+     <!-- back to top button -->
+    <div class="top" >
+      <a href="#top">&#x25B2; Back to Top</a>
+   </div>
+
+   <!-- script -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
       var options = {
-        strings: ["I&apos;m &lt;Your Name Here!&gt;", "Thanks for visiting!"],
+        strings: ["I&apos;m Jin", "Thank you for visiting!"],
         typeSpeed: 100,
         backSpeed: 100,
-        loop: false,
+        loop: true,
       };
       var typed = new Typed(".typing", options);
     </script>
